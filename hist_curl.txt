@@ -1,0 +1,10 @@
+#set a custom header to show - still figuring out
+curl -X PUT -d '/var/www/dataverse/branding/custom-header.html' http://localhost:8080/api/admin/settings/:HeaderCustomizationFile
+# setting a custom logo named logo.png
+curl -X PUT -d '/logos/navbar/logo.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile
+# setting a custom logo named ucla-dataverse-trim.png
+curl -X PUT -d '/logos/navbar/ucla-dataverse-trim.png' http://localhost:8080/api/admin/settings/:LogoCustomizationFile
+# set the guides base url to github repo NOTE: url is <base_url>/en/<verseion>/url in dvn
+curl -X PUT -d https://ucla-data-archive.github.io/ucla-dataverse/ http://localhost:8080/api/admin/settings/:GuidesBaseUrl
+# setting version to '' blank, so we don't need version num.
+curl -X PUT -d '' http://localhost:8080/api/admin/settings/:GuidesVersion
